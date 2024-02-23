@@ -1,0 +1,199 @@
+body {
+    font-family: 'Arial', sans-serif; /* Шрифт текста */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #333; /* Серый цвет фона */
+    overflow-x: hidden; /* Скрыть горизонтальную полосу прокрутки */
+}
+
+::-webkit-scrollbar {
+    width: 4px; /* Ширина вертикальной полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Цвет фона скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; /* Цвет полосы прокрутки */
+    border-radius: 4px; /* Скругление углов */
+}
+
+@font-face {
+    font-family: 'ComicoroRu_0.ttf';
+    src: url('ComicoroRu_0.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+    /* Другие форматы шрифта, такие как WOFF, WOFF2, EOT, могут быть добавлены для поддержки различных браузеров */
+}
+
+header {
+    font-family: 'ComicoroRu_0.ttf';
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-image: url('img/bg.jpg'); /* Путь к вашей картинке */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Необходимо для позиционирования текста */
+}
+
+header .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .background-image::after {
+    content: "danlacho "; /* Текст, который будет отображаться на фоне */
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+p {
+    color: #ccc;
+}
+
+footer {
+    font-family: 'ComicoroRu_0.ttf';
+    background-color: #1d1d1d;
+    padding: 20px;
+    text-align: center  ;
+}
+
+.footer .container {
+    font-family: 'ComicoroRu_0.ttf';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-projects,
+.btn-social-media {
+    font-family: 'ComicoroRu_0.ttf';
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 5px 10px; /* Уменьшили размер кнопок */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Уменьшили размер шрифта */
+    transition: background-color 0.3s; /* Добавили плавный переход при наведении */
+}
+
+.btn-projects:hover,
+.btn-social-media:hover {
+    font-family: 'ComicoroRu_0.ttf';
+    background-color: #666;
+}
+
+.project body {
+    font-family: 'Arial', sans-serif; /* Шрифт текста */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #333; /* Серый цвет фона */
+    overflow-x: hidden; /* Скрыть горизонтальную полосу прокрутки */
+}
+
+.project {
+    /* background-image: url('your_background_image.jpg'); */ /* Удалите или закомментируйте это свойство */
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.project img {
+    width: 150px; /* Ширина изображения проекта */
+    margin-right: 20px; /* Отступ справа от изображения */
+}
+
+.project-description h2 {
+    color: #fff;
+}
+
+.project-description p {
+    color: #ccc;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание кнопки на главную по правому краю */
+}
+
+footer {
+        position: fixed; /* Фиксированное позиционирование */
+        bottom: 0; /* Футер будет располагаться внизу страницы */
+        width: 100%; /* Ширина футера равна ширине страницы */
+        background-color: #222222; /* Цвет фона */
+        padding: 20px 0; /* Внутренние отступы сверху и снизу */
+        text-align: center; /* Выравнивание текста по центру */
+}
+
+.project-description {
+    flex: 1; /* Растягиваем блок на всю доступную ширину */
+}
+
+.animated {
+    animation-name: slideInFromTop;
+    animation-duration: 1s;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.project img {
+    /* Optionally style the image */
+    max-width: 100%;
+    height: auto;
+}
+
+.animated {
+    animation-name: slideInFromBottom;
+    animation-duration: 1s;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

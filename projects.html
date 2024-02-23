@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/x-icon.ico" type="image/x-icon"> <!-- Иконка для вкладки браузера -->
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="project animated">
+                <img src="img/bot.webp" alt="Project 1">
+                <div class="project-description">
+                    <h2>Bot Arkasha</h2>
+                    <p>The bot was created for fun and to test programming skills!</p>
+                </div>
+            </div>                     
+            </div>
+            </div>
+            <!-- Добавьте другие проекты по аналогии -->
+        </div>
+    </main>
+    <footer class="animated">
+        <div class="container">
+            <button class="btn-projects" onclick="window.location.href='index.html'">На главную</button>
+            <button class="btn-social-media" onclick="window.location.href='social.html'">Соц-сети</button>
+        </div>
+    </footer>
+    
+
+    <script>
+        function goToIndex() {
+            document.body.style.animation = "fadeOut 1s";
+            setTimeout(function() {
+                window.location.href = 'index.html';
+                window.location.href = 'social.html';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+
+
